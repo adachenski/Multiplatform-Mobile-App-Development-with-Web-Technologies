@@ -50,15 +50,16 @@ angular.module('conFusion.services', ['ngResource'])
 
     var favFac={};
     var favorites = [];
+
     favFac.addToFavorites = function(index){
 
       for(var i = 0; i< favorites.length; i+=1){
         if(favorites[i].id == index){
           return;
         }
-        console.log(favorites);
-        favorites.push({id:index});
       }
+      console.log(favorites);
+      favorites.push({id:index});
     };
 
     favFac.deleteFromFavorites = function(index){
